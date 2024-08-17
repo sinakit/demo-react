@@ -3,12 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { store } from './stores';
+import App1 from './App1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // virtual DOM
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    <App1 />
+    </Provider>
   </React.StrictMode>
 );
 

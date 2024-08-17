@@ -6,23 +6,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment } from './stores/counter';
 
 
-function App() {
+function App1() {
   const count = useSelector((state) => state.counter.value)
   const dispatch = useDispatch()
-  // const {count, increment, decrement, message} = useApp();
   console.log("count", count);
   const onClick = () => {
     console.log("clicked");
-    dispatch(increment())
+    dispatch(increment());
   };
   const onClickFromChild = () => {
     console.log("clicked from child");
-    dispatch(increment())
+    dispatch(increment());
   }
   return (
     <>
-    <div style={{border: '10px', padding: '10px', borderColor: '#f00', background:'rgb(236 236 236)'}}>
-      <h1 style={{textAlign:'center'}}>App Component</h1>
+    <div style={{marginTop:'10px', backgroundColor:'rgb(255 151 151)', padding: '10px'}}>
+      <h1 style={{textAlign:'center'}}>App Component I</h1>
       <h1>{count}</h1>
       {/* <h1>{message}</h1> */}
       <button onClick={onClick}>Increment</button>
@@ -37,4 +36,4 @@ function App() {
 
 
 
-export default App;
+export default App1;

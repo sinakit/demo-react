@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function useApp(){
+export function useApp(){
     const [count, setCount] = useState(0);
     const [message, setMessage] = useState("count");
     const increment = () => {
@@ -21,4 +21,3 @@ function useApp(){
     }, [count]);
     return {count, increment, decrement, message};
   }
-  export {useApp};
